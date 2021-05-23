@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Overwriting bootstrap classes to style buttons */
+
+.btn {
+    background-color: #e486ed;
+    color: black;
+    border: 1px solid purple;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.btn:hover {
+    color: purple;
+    border: 1px solid #8b008b;
+}
+
+.btn:disabled {
+    background-color: grey;
+    border: 1px solid #2c112c;
+    color: black;
+}
+
+.btn:focus {
+    color: magenta;
+}
+
+.btn:active:enabled {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+/* Styling everything */
+
+body {
+    background: rgb(242, 134, 233);
+    background: linear-gradient(90deg, rgba(242, 134, 233, 1) 5%, rgba(245, 167, 241, 1) 15%, rgba(234, 198, 236, 1) 50%, rgba(227, 169, 241, 1) 85%, rgba(214, 134, 240, 1) 95%);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #580558;
+    text-align: center;
+    font-size: 180%;
+    font-family: 'Petit Formal Script', cursive;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #580558;
+    font-size: 160%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 120%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+p {
+    color: #6d0c6d;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+a {
+    color: #e83cff;
+}
+
+a:hover {
+    color: rgb(174, 0, 255);
+    transition-duration: 0.5s;
+}
+
+.certificatelink {
+    font-size: 22px;
+}
+
+#profilepic {
+    float: right;
+    width: 300px;
+    max-width: 100%;
+    margin: 5px 0px 20px 10px;
+}
+
+img {
+    border-radius: 12px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Styling all input & text area elements */
+
+input, textarea {
+    border-radius: 8px;
+    border: 1px solid purple;
+    background-color: rgb(231, 168, 245);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* Styling the centered bootstrap navbar */
+
+.navbar {
+    background-color: #e667e6;
+    background-image: linear-gradient(to right, #f286e9, #d686f0);
+    margin-bottom: 20px;
+    font-size: 120%;
+    padding: 0px;
+    box-shadow: 0 2px 2px -2px #f286e9;
+}
+
+/* Styling link text color for bootstrap navbar */
+
+.navtext {
+    color: black;
+}
+
+.navtext:hover {
+    color: purple;
+}
+
+.navtext {
+    transition-duration: 0.5s;
+}
+
+.dropdown-menu {
+    background-color: #e667e6;
+}
+
+.dropdown-item:hover {
+    background-color: #9e419e;
+}
+
+/* Unordered heartlist for bio */
+
+.heartlist ul {
+    list-style: none;
+}
+
+/* Unordered heartlist for bio - Position absolute and negative margin to stop heart bullet from interrupting the flow of the text */
+
+.heartlist ul li:before {
+    content: "\2661";
+    color: magenta;
+    font-size: 24px;
+    position: absolute;
+    margin-left: -1.0em;
+}
+
+/* Unordered heartlist for bio - Position relative, so heart-list is aligned properly */
+
+.heartlist li {
+    font-size: 24px;
+    color: #6d0c6d;
+    position: relative;
+    margin-left: 1.0em;
+}
+
+/* Roleplay dice roller -------------------------------------------------------------------*/
+
+/* Containers to ensure that dices are close enough to eachother */
+
+#dicecontainer, #diceinputcontainer {
+    text-align: center;
+    max-width: 200px;
+    margin: auto;
+}
+
+/* Dices */
+
+.dice {
+    max-width: 80px;
+    max-height: 80px;
+    min-height: 80px;
+    min-width: 80px;
+    background: rgb(217, 102, 252);
+    border: 1px solid rgb(71, 0, 85);
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 45px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    box-shadow: 1.5px 1.5px 5px 1px rgb(105, 37, 105);
+}
+
+#dice1 {
+    display: inline;
+}
+
+#dice2 {
+    display: none;
+}
+
+/* Btns */
+
+.dicebtncontainer {
+    text-align: center;
+    margin: auto;
+    width: 100px;
+}
+
+.dicebtns {
+    width: 100px;
+}
+
+#subBtn {
+    display: none;
+}
+
+/* Inputs here */
+
+#diceinputcontainer1 {
+    margin: auto;
+    max-width: 120px;
+}
+
+#diceinputcontainer2 {
+    margin: auto;
+    max-width: 120px;
+    display: none;
+}
+
+.diceinput {
+    max-width: 80px;
+    width: 80px;
+    margin: 5px 2px 0px 2px;
+    text-align: center;
+    color: rgb(87, 80, 80);
+}
+
+/* Display input 1 */
+
+#input1 {
+    display: inline;
+}
+
+/* Display input 2 */
+
+#input2 {
+    display: none;
+}
+
+/* Display for turn counter and sum */
+
+#displayturn, #displaysum {
+    text-align: center;
+    color: purple;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Population graphs ------------------------------------------------------------------ */
+
+.centeredcontent {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* dropdown */
+
+#indicatorcode {
+    position: relative;
+    border-radius: 8px;
+    padding: 7px 6px 7px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid purple;
+    width: 200px;
+    /* Custom arrow */
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("./imgs/br_down.webp") #e486ed no-repeat calc(100% - 10px) !important;
+}
+
+/* Hides title option from select */
+
+.optiontohide {
+    display: none;
+}
+
+#indicatorcode:focus {
+    outline: none;
+}
+
+/* Multifunctional clock --------------------------------------------------------------------*/
+
+/* Clock container styling: */
+
+.clockmainframe {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    height: 420px;
+}
+
+/* Switch buttons between clock modes */
+
+#clockfunctiondropdown {
+    padding: 5px;
+    background-color: #e486ed;
+    border: 1px solid purple;
+    border-radius: 8px;
+    color: black;
+}
+
+/* Removed blue outline from bootstrap dropdown button element*/
+
+#clockfunctiondropdown:focus {
+    border-color: purple;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 1px purple;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 1px purple;
+}
+
+#clockfunctiondropdown {
+    transition-duration: 0.5s;
+}
+
+#clockfunctiondropdown:hover {
+    color: purple;
+}
+
+/* Setting width to clock function buttons */
+
+.clockbutton {
+    width: 140px;
+}
+
+.clockbuttoncontainer {
+    text-align: center;
+}
+
+/* RT Clock ------------------------------------- */
+
+#clock {
+    width: 100%;
+    font-size: 200%;
+    color: #e486ed;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+/* RT Clock greeting */
+
+#greeting {
+    font-size: 200%;
+    color: #e486ed;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+/* Stopwatch ----------------------------------------- */
+
+/* Stopwatch display */
+
+#stopwatchdisplay {
+    width: 100%;
+    font-size: 200%;
+    color: #e486ed;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+/* Timer------------------------------------*/
+
+/* Timer  display */
+
+#countdown {
+    width: 100%;
+    font-size: 200%;
+    color: #e486ed;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+/* Timer inputs  centered */
+
+.timerinputcontainer {
+    text-align: center;
+}
+
+/* Vue.js tweet app project -----------------------------------------------------------------------*/
+
+#containerfortweetapp {
+    margin-bottom: 50px;
+}
+
+/* .tweets class wraps text so it doesn't go over the border */
+
+.tweets {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.tweetappsettings {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    border: solid purple 1px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 0.2px purple;
+}
+
+.tweetappsettings label {
+    float: left;
+    margin: 20px;
+}
+
+.tweetappsettings textarea {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.tweetappsettings input {
+    width: 80%;
+    border-radius: 8px;
+    margin: 20px;
+    max-width: 400px;
+}
+
+.settinglabel {
+    width: 100px;
+}
+
+#profilepage {
+    border: solid 1px purple;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 0.2px purple;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+}
+
+/* Vue Ticket App ------------------------------------------------------------ */
+
+#ticketapp {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.ticketinputscontainer label {
+    width: 80px;
+}
+
+#ticket-quantity {
+    width: 50px;
+    position: relative;
+    margin: 5px;
+    /* Custom arrow */
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    border: 1px solid purple;
+    border-radius: 8px;
+    appearance: none;
+    background: url("./imgs/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
+}
+
+#ticket-quantity:focus {
+    outline: none;
+}
+
+.labeltext {
+    margin-right: 10px;
+}
+
+#signature {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 22px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Vue.js interactive form ------------------------------------------------------------------------*/
+
+#interactiveform {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 150px;
+    height: 25px;
+    background: rgb(231, 168, 245);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #40004d;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #40004d;
+    cursor: pointer;
+}
+
+.sliderscore {
+    font-size: 22px;
+}
+
+/* RPS Game ------------------------------------------------*/
+
+#rpscontainer {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#rpsinput {
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.rpsemojis img {
+    max-width: 100px;
+    width: 30%;
+}
+
+/* Tip Calculator by Vue.js ------------------------------------------- */
+
+.tipcalculatorcontainer {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid rgb(177, 36, 165);
+    border-radius: 20px;
+    padding: 20px 40px 20px 40px;
+}
+
+#dropdownforcurrency {
+    position: relative;
+    border-radius: 8px;
+    padding: 2px 2px 2px 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid purple;
+    width: 50px;
+    /* Custom arrow */
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("./imgs/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
+}
+
+.tipinput {
+    width: 120px;
+}

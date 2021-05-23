@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../githubstyles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/hearticon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <title>Angelica's web dev portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./ticketapp.js" defer></script>
+</head>
+
+<body>
+    <!-- Header, Nav and Main tags for accessibility-->
+    <!-- Bootstrap centered navbar, custom css classes are navbar and navtext-->
+    <nav>
+
+        <ul class="nav justify-content-center navbar">
+
+            <!--Home link-->
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://angelicaroselie.github.io/">Home</a>
+            </li>
+
+            <!--Vanilla JS projects-->
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="dropdown-toggle nav-link navtext" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        JavaScript projects
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item"
+                            href="../../vanillajsprojects/roleplaydiceroller/roleplaydiceroller.html">Roleplay dice
+                            roller</a>
+                        <a class="dropdown-item" href="../../vanillajsprojects/rpslsgame/rpslsgame.html">R.P.S.L.S
+                            game</a>
+                        <a class="dropdown-item"
+                            href="../../vanillajsprojects/populationgraphs/populationgraphs.html">Population graphs</a>
+                        <a class="dropdown-item"
+                            href="../../vanillajsprojects/multifunctionalclock/multifunctionalclock.html">Multifunctional
+                            clock</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <!--Vue.js projects-->
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="dropdown-toggle nav-link navtext" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Vue.js projects
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="../../vuejsprojects/tweetapp/tweetapp.html">Tweet app</a>
+                        <a class="dropdown-item" href="../../vuejsprojects/ticketapp/ticketapp.html">Ticket app</a>
+                        <a class="dropdown-item" href="../../vuejsprojects/surveyform/surveyform.html">Survey form</a>
+                        <a class="dropdown-item" href="../../vuejsprojects/tipcalculator/tipcalculator.html">Tip
+                            calculator</a>
+                    </div>
+                </div>
+            </li>
+
+            <!--External links-->
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://github.com/angelicaroselie/" target="_blank">GitHub</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://www.angelicaroselie.com/"
+                    target="_blank">Angelicaroselie.com</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://www.linkedin.com/in/angelicaroselie/"
+                    target="_blank">LinkedIn</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!--Main content of the app-->
+    <main>
+
+        <!--Bootstrap container for better responsiveness-->
+        <div class="container">
+
+            <h1>Ticket app made with Vue.js</h1>
+
+            <!--Vue app here-->
+
+            <div id="ticketapp">
+
+                <form v-on:reset="resetFields" v-on:submit.prevent="submitForm">
+
+                    <div class="row ticketinputscontainer">
+
+
+                        <div class="col-sm">
+
+                            <div class="form-field">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" maxlength="30"
+                                    v-model.trim="firstName" />
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm">
+                            <div class="form-field">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" maxlength="30"
+                                    v-model.trim="lastName" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-sm ticketinputscontainer">
+
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" maxlength="50" v-model.trim.lazy="email"
+                                    v-bind:style="invalidEmailStyles" />
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-sm">
+                            <div class="form-field">
+                                <label for="ticket-quantity">Ticket Quantity</label>
+                                <select id="ticket-quantity" v-model.number="ticketQuantity">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Radio btns-->
+                    <div class="form-field">
+                        <legend>Ticket Type</legend>
+                        <div>
+                            <input type="radio" id="general" value="general" name="radioticket" v-model="ticketType">
+                            <label for="general">General Admission</label>
+                        </div>
+
+
+                        <div>
+                            <input type="radio" id="vip" value="vip" name="radioticket" v-model="ticketType">
+                            <label for="vip">VIP</label>
+                        </div>
+                    </div>
+
+
+                    <!-- Checkboxes etc-->
+                    <fieldset>
+                        <legend>How did you hear about this event?</legend>
+                        <div>
+                            <input type="checkbox" id="friend" name="informationfrom" value="friend"
+                                v-model="referrals">
+                            <label for="friend">Friend</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="publication" name="informationfrom" value="publication"
+                                v-model="referrals">
+                            <label for="publication">Publication</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="social-media" name="informationfrom" value="social"
+                                v-model="referrals">
+                            <label for="social-media">Social Media</label>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="form-row">
+                        <label for="requests" class="labeltext">Special Requests:</label>
+
+                        <textarea id="requests" name="requests" maxlength="70"
+                            v-model.trim="specialRequests"></textarea>
+                    </div>
+
+
+                    <fieldset>
+                        <legend>Purchase Agreement</legend>
+                        <p>I, {{ fullName }}, wish to buy {{ ticketDescription }}. I
+                            understand that all
+                            ticket sales are final.</p>
+                        <input type="checkbox" name="agreement" id="agree" v-model="purchaseAgreementSigned">
+                        <label for="agree">I Agree</label>
+                    </fieldset>
+
+
+                    <!--V-on class on signature makes the field update the fullName data attribute on vue.js-->
+                    <div>
+                        <label for="signature" class="labeltext">Signature:</label>
+                        <input id="signature" class="signature" name="signature" maxlength="60"
+                            v-model.trim="fullName" />
+                    </div>
+
+
+                    <div>
+                        <button type="reset" class="btn">Reset</button>
+
+                        <!--V-bind makes button disabled if form is not valid-->
+                        <button type="submit" class="btn" v-bind:disabled="!formIsValid">Confirm
+                            Tickets</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">&copy; Angelica J. 2020 &#8594;</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

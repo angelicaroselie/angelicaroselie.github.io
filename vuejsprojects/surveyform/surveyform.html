@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../githubstyles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/hearticon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <title>Angelica's web dev portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./surveyform.js" defer></script>
+</head>
+
+<body>
+    <!-- Header, Nav and Main tags for accessibility-->
+    <!-- Bootstrap centered navbar, custom css classes are navbar and navtext-->
+    <nav>
+
+        <ul class="nav justify-content-center navbar">
+
+            <!--Home link-->
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://angelicaroselie.github.io/">Home</a>
+            </li>
+
+            <!--Vanilla JS projects-->
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="dropdown-toggle nav-link navtext" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        JavaScript projects
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item"
+                            href="../../vanillajsprojects/roleplaydiceroller/roleplaydiceroller.html">Roleplay dice
+                            roller</a>
+                        <a class="dropdown-item" href="../../vanillajsprojects/rpslsgame/rpslsgame.html">R.P.S.L.S
+                            game</a>
+                        <a class="dropdown-item"
+                            href="../../vanillajsprojects/populationgraphs/populationgraphs.html">Population graphs</a>
+                        <a class="dropdown-item"
+                            href="../../vanillajsprojects/multifunctionalclock/multifunctionalclock.html">Multifunctional
+                            clock</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <!--Vue.js projects-->
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="dropdown-toggle nav-link navtext" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Vue.js projects
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="../../vuejsprojects/tweetapp/tweetapp.html">Tweet app</a>
+                        <a class="dropdown-item" href="../../vuejsprojects/ticketapp/ticketapp.html">Ticket app</a>
+                        <a class="dropdown-item" href="../../vuejsprojects/surveyform/surveyform.html">Survey form</a>
+                        <a class="dropdown-item" href="../../vuejsprojects/tipcalculator/tipcalculator.html">Tip
+                            calculator</a>
+                    </div>
+                </div>
+            </li>
+
+            <!--External links-->
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://github.com/angelicaroselie/" target="_blank">GitHub</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://www.angelicaroselie.com/"
+                    target="_blank">Angelicaroselie.com</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link navtext" href="https://www.linkedin.com/in/angelicaroselie/"
+                    target="_blank">LinkedIn</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!--Main content of the app-->
+    <main>
+
+        <!--Bootstrap container for better responsiveness-->
+        <div class="container">
+
+            <h1>Survey form made with Vue.js</h1>
+
+            <!--Vue app here-->
+
+            <div id="interactiveform">
+
+                <form>
+
+                    <div>
+
+                        <p>Question1 (1-10)</p>
+                        <input class="slider" type="range" min="1" max="10" step="1" value="1" v-model="question1">
+
+                        <span class="sliderscore"> {{ question1 }} </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Question2 (1-10)</p>
+                        <input class="slider" type="range" min="1" max="10" step="1" value="1" v-model="question2">
+
+                        <span class="sliderscore"> {{ question2 }} </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Question3 (1-10)</p>
+                        <input class="slider" type="range" min="1" max="10" step="1" value="1" v-model="question3">
+
+                        <span class="sliderscore"> {{ question3 }} </span>
+
+                    </div>
+
+                </form>
+
+                <!-- console log print test-->
+
+                {{ log(question1) }}
+
+                <p>Work in progress..</p>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">&copy; Angelica J. 2020 &#8594;</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
