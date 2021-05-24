@@ -292,7 +292,7 @@ input:focus, textarea:focus {
     /* Safari and Chrome */
     -webkit-appearance: none;
     appearance: none;
-    background: url("./imgs/br_down.webp") #e486ed no-repeat calc(100% - 10px) !important;
+    background: url("./img/br_down.webp") #e486ed no-repeat calc(100% - 10px) !important;
 }
 
 /* Hides title option from select */
@@ -484,7 +484,7 @@ input:focus, textarea:focus {
     border: 1px solid purple;
     border-radius: 8px;
     appearance: none;
-    background: url("./imgs/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
+    background: url("./img/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
 }
 
 #ticket-quantity:focus {
@@ -590,7 +590,7 @@ input:focus, textarea:focus {
     /* Safari and Chrome */
     -webkit-appearance: none;
     appearance: none;
-    background: url("./imgs/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
+    background: url("./img/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
 }
 
 .tipinput {
