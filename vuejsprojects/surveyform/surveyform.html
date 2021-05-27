@@ -103,40 +103,94 @@
 
                 <form>
 
-                    <div>
+                    <div class="row surveyinputscontainer">
+                        <div class="col-sm">
 
-                        <p>Question1 (1-10)</p>
-                        <input class="slider" type="range" min="1" max="10" step="1" value="1" v-model="question1">
+                            <div class="form-field">
+                                <label for="surveyfirstname">First Name</label>
+                                <input type="text" id="surveyfirstname" name="surveyfirstname" maxlength="30" v-model.trim="surveyFirstName" />
+                            </div>
 
-                        <span class="sliderscore"> {{ question1 }} </span>
+                        </div>
+
+                        <div class="col-sm">
+                            <div class="form-field">
+                                <label for="surveylastname">Last Name</label>
+                                <input type="text" id="surveylastname" name="surveylastname" maxlength="30" v-model.trim="surveyLastName" />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row surveyinputscontainer">
+                        <div class="col-sm">
+
+                            <div class="form-field">
+                                <label for="surveyemail">Your Email</label>
+                                <input type="text" id="surveyemail" name="surveyemail" maxlength="50" v-model.trim="surveyEmail" />
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <div class="col">
+
+                            <div>
+
+                                <p>Rate service quality (1-10)</p>
+                                <input class="slider" id="servicequality" name="servicequality" type="range" min="1"
+                                    max="10" step="1" value="1" v-model="serviceQuality">
+
+                                <span class="sliderscore"> {{ serviceQuality }} </span>
+
+                            </div>
+
+                            <div>
+
+                                <p>Rate service speed (1-10)</p>
+                                <input class="slider" id="servicespeed" name="servicespeed" type="range" min="1"
+                                    max="10" step="1" value="1" v-model="serviceSpeed">
+
+                                <span class="sliderscore"> {{ serviceSpeed }} </span>
+
+                            </div>
+
+                            <div>
+
+                                <p>Store cleanliness (1-10)</p>
+                                <input class="slider" id="cleanliness" name="cleanliness" type="range" min="1" max="10"
+                                    step="1" value="1" v-model="cleanliness">
+
+                                <span class="sliderscore"> {{ cleanliness }} </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+                            <p>Feedback by your own words:</p>
+
+                            <textarea name="feedback" id="feedback" cols="28" rows="5" maxlength="150">Give feedback (150 characters)</textarea>
+
+                            <button type="submit" class="btn surveybtn">Send form</button>
+
+                        </div>
 
                     </div>
 
-                    <div>
 
-                        <p>Question2 (1-10)</p>
-                        <input class="slider" type="range" min="1" max="10" step="1" value="1" v-model="question2">
-
-                        <span class="sliderscore"> {{ question2 }} </span>
-
-                    </div>
-
-                    <div>
-
-                        <p>Question3 (1-10)</p>
-                        <input class="slider" type="range" min="1" max="10" step="1" value="1" v-model="question3">
-
-                        <span class="sliderscore"> {{ question3 }} </span>
-
-                    </div>
+                    
 
                 </form>
 
-                <!-- console log print test-->
+                <!-- console log print test
 
-                {{ log(question1) }}
-
-                <p>Work in progress..</p>
+                {{ log(question1) }}-->
 
 
             </div>

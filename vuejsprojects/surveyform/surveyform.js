@@ -3,9 +3,13 @@ const app = new Vue({
   el: '#interactiveform',
   data: {
 
-      question1: '1',
-      question2: '1',
-      question3: '1',
+      serviceQuality: '1',
+      serviceSpeed: '1',
+      cleanliness: '1',
+      surveyFirstName: '',
+      surveyLastName: '',
+      surveyEmail: '',
+
 
   },
   methods: {

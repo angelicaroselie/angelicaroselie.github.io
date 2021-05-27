@@ -94,7 +94,7 @@ a:hover {
     float: right;
     width: 300px;
     max-width: 100%;
-    margin: 5px 0px 20px 10px;
+    margin: 5px 0px 20px 20px;
 }
 
 img {
@@ -503,23 +503,26 @@ input:focus, textarea:focus {
     margin-bottom: 10px;
 }
 
-/* Vue.js interactive form ------------------------------------------------------------------------*/
+/* Vue.js survey form ------------------------------------------------------------------------*/
 
 #interactiveform {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    border: 1px solid purple;
+    border-radius: 8px;
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 150px;
+    width: 200px;
     height: 25px;
     background: rgb(231, 168, 245);
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    margin-bottom: 20px;
 }
 
 .slider:hover {
@@ -545,6 +548,14 @@ input:focus, textarea:focus {
 
 .sliderscore {
     font-size: 22px;
+}
+
+.surveyinputscontainer{
+    margin-bottom: 20px;
+}
+
+.surveybtn{
+    margin-top: 40px;
 }
 
 /* RPS Game ------------------------------------------------*/
