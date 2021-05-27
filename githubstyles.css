@@ -513,9 +513,13 @@ input:focus, textarea:focus {
     border-radius: 20px;
 }
 
+.formtextarea{
+    max-width: 95%;
+}
+
 .slider {
     -webkit-appearance: none;
-    width: 200px;
+    width: 180px;
     height: 25px;
     background: rgb(231, 168, 245);
     outline: none;
