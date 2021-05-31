@@ -7,6 +7,7 @@
 
 .centeringcontainer {
     text-align: center;
+    margin: 0 auto;
 }
 
 /* Overwriting bootstrap classes to style buttons */
@@ -39,6 +40,35 @@
     /* Scaling button to 0.98 to its original size */
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24);
     /* Lowering the shadow */
+}
+
+/* Custom arrow dropdown */
+
+.customarrowdropdown {
+    position: relative;
+    border-radius: 8px;
+    padding: 2px 2px 2px 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid purple;
+    width: 50px;
+    /* Custom arrow */
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("./img/br_down.webp") rgb(232, 154, 250) no-repeat calc(100% - 10px) !important;
+}
+
+.customarrowdropdown:focus {
+    outline: none;
+}
+
+/* Hides title option from select */
+
+.optiontohide {
+    display: none;
 }
 
 /* Styling everything */
@@ -75,6 +105,12 @@ h3 {
     font-size: 120%;
     margin-bottom: 20px;
     margin-top: 30px;
+}
+
+/* For app displays setting font color in div elements */
+
+div {
+    color: #8b008b;
 }
 
 p {
@@ -257,7 +293,6 @@ input:focus, textarea:focus {
     width: 80px;
     margin: 5px 2px 0px 2px;
     text-align: center;
-    color: rgb(87, 80, 80);
 }
 
 /* Display input 1 */
@@ -276,44 +311,18 @@ input:focus, textarea:focus {
 
 #displayturn, #displaysum {
     text-align: center;
-    color: purple;
     margin: 5px 0px 5px 0px;
 }
 
 /* Population graphs ------------------------------------------------------------------ */
 
-.centeredcontent {
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* dropdown */
+/* Styling custom arrow dropdown */
 
 #indicatorcode {
-    position: relative;
-    border-radius: 8px;
     padding: 7px 6px 7px 6px;
     margin-bottom: 15px;
     font-size: 14px;
-    border: 1px solid purple;
     width: 200px;
-    /* Custom arrow */
-    /* Firefox */
-    -moz-appearance: none;
-    /* Safari and Chrome */
-    -webkit-appearance: none;
-    appearance: none;
-    background: url("./img/br_down.webp") rgb(232, 154, 250) no-repeat calc(100% - 10px) !important;
-}
-
-/* Hides title option from select */
-
-.optiontohide {
-    display: none;
-}
-
-#indicatorcode:focus {
-    outline: none;
 }
 
 /* Multifunctional clock --------------------------------------------------------------------*/
@@ -327,7 +336,7 @@ input:focus, textarea:focus {
     height: 420px;
 }
 
-/* Switch buttons between clock modes */
+/* ~~~~~~~ Dropdown button for switch buttons between clock modes~~~~~~~*/
 
 #clockfunctiondropdown {
     padding: 5px;
@@ -360,13 +369,32 @@ input:focus, textarea:focus {
     width: 140px;
 }
 
-/* Clock displays for each mode ------------------------------------- */
+/* Clock displays for each mode */
 
 .clockdisplay {
-    color: #8b008b;
     text-align: center;
     font-size: 200%;
     margin: 10px 0px 10px 0px;
+}
+
+/* RPSLS Game ------------------------------------------------*/
+
+#rpscontainer {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#rpsinput {
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.rpsemojis img {
+    max-width: 100px;
+    width: 30%;
 }
 
 /* Vue.js tweet app project -----------------------------------------------------------------------*/
@@ -433,25 +461,6 @@ input:focus, textarea:focus {
 
 .ticketinputscontainer label {
     width: 80px;
-}
-
-#ticket-quantity {
-    width: 50px;
-    position: relative;
-    margin: 5px;
-    /* Custom arrow */
-    /* Firefox */
-    -moz-appearance: none;
-    /* Safari and Chrome */
-    -webkit-appearance: none;
-    border: 1px solid purple;
-    border-radius: 8px;
-    appearance: none;
-    background: url("./img/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
-}
-
-#ticket-quantity:focus {
-    outline: none;
 }
 
 .labeltext {
@@ -524,27 +533,7 @@ input:focus, textarea:focus {
     margin-top: 40px;
 }
 
-/* RPS Game ------------------------------------------------*/
-
-#rpscontainer {
-    margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-#rpsinput {
-    width: 100px;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-
-.rpsemojis img {
-    max-width: 100px;
-    width: 30%;
-}
-
-/* Tip Calculator by Vue.js ------------------------------------------- */
+/* Tip Calculator made with Vue.js ------------------------------------------- */
 
 .tipcalculatorcontainer {
     max-width: 600px;
@@ -552,23 +541,6 @@ input:focus, textarea:focus {
     border: 1px solid rgb(177, 36, 165);
     border-radius: 20px;
     padding: 20px 40px 20px 40px;
-}
-
-#dropdownforcurrency {
-    position: relative;
-    border-radius: 8px;
-    padding: 2px 2px 2px 4px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid purple;
-    width: 50px;
-    /* Custom arrow */
-    /* Firefox */
-    -moz-appearance: none;
-    /* Safari and Chrome */
-    -webkit-appearance: none;
-    appearance: none;
-    background: url("./img/br_down.webp") rgb(232, 154, 250) no-repeat calc(100% - 10px) !important;
 }
 
 .tipinput {
