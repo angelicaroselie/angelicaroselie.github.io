@@ -106,7 +106,7 @@
                     <div>
                         <!--Input for the bill amount-->
                         <h2>Amount of the bill:</h2>
-                        <input type="tel" class="tipinput" placeholder="Amount here:" v-model="billAmount"
+                        <input type="tel" class="tipinput" placeholder="Amount here:" v-model.number="billAmount"
                             @change="calculateTip" maxlength="7">
 
 
@@ -122,7 +122,7 @@
 
                     <div>
                         <h2>Tip Percent:</h2>
-                        <input class="slider" type="range" min="0" max="30" step="5" value="0" v-model="tipPercent"
+                        <input class="slider" type="range" min="0" max="30" step="5" value="0" v-model.number="tipPercent"
                             @change="calculateTip">
 
                         <span class="sliderscore"> {{ tipPercent }}% </span>
@@ -132,6 +132,11 @@
                     <!--Display amount of the tip to pay-->
                     <div>
                         <h2>Tip to pay: {{currency}}{{ tipToPay }}</h2>
+                    </div>
+
+                    <!--Calculating and displaying total amount of the bill to pay-->
+                    <div>
+                        <h2>Total sum to pay: {{currency}}{{ Number(tipToPay) + Number(billAmount) }}</h2>
                     </div>
 
 

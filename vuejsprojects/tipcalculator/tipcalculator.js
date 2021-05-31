@@ -2,10 +2,10 @@
 const app = new Vue({
     el: '#tipcalculatorbyvue',
     data: {
-        billAmount: '',
+        billAmount: 0, //Original bill
         currency: '€',
-        tipPercent: '0',
-        tipToPay: null,
+        tipPercent: 0, //Tip percent selected by user
+        tipToPay: 0, //Display tip to pay
     },
     methods: {
       log(msg){
@@ -27,9 +27,6 @@ const app = new Vue({
         }
         //Calculates tip to be paid
         this.tipToPay = (this.billAmount * this.tipPercent / 100).toFixed(2);
-
-
-
      },
 
 
