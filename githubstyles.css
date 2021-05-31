@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+/* Container just for centering elements ---------------------------------------- */
+
+.centeringcontainer {
+    text-align: center;
+}
+
 /* Overwriting bootstrap classes to style buttons */
 
 .btn {
@@ -354,59 +360,13 @@ input:focus, textarea:focus {
     width: 140px;
 }
 
-.clockbuttoncontainer {
-    text-align: center;
-}
+/* Clock displays for each mode ------------------------------------- */
 
-/* RT Clock ------------------------------------- */
-
-#clock {
+.clockdisplay {
     color: #8b008b;
-    width: 100%;
-    font-size: 200%;
     text-align: center;
+    font-size: 200%;
     margin: 10px 0px 10px 0px;
-}
-
-/* RT Clock greeting */
-
-#greeting {
-    color: #8b008b;
-    font-size: 200%;
-    text-align: center;
-    margin: 10px 0px 10px 0px;
-}
-
-/* Stopwatch ----------------------------------------- */
-
-/* Stopwatch display */
-
-#stopwatchdisplay {
-    width: 100%;
-    font-size: 200%;
-    color: #e486ed;
-    text-shadow: 1px 1px black;
-    text-align: center;
-    margin: 20px 0px 20px 0px;
-}
-
-/* Timer------------------------------------*/
-
-/* Timer  display */
-
-#countdown {
-    width: 100%;
-    font-size: 200%;
-    color: #e486ed;
-    text-shadow: 1px 1px black;
-    text-align: center;
-    margin: 20px 0px 20px 0px;
-}
-
-/* Timer inputs  centered */
-
-.timerinputcontainer {
-    text-align: center;
 }
 
 /* Vue.js tweet app project -----------------------------------------------------------------------*/

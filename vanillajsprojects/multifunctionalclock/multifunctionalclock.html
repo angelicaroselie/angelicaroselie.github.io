@@ -111,9 +111,9 @@
 
         <h2 class="text-center">Real-time Clock</h2>
 
-        <div id="clock"></div> <!-- RT Clock goes here-->
+        <div id="clock" class="clockdisplay"></div> <!-- RT Clock goes here-->
 
-        <div id="greeting"></div> <!-- RT Clock greeting goes here-->
+        <div id="greeting" class="clockdisplay"></div> <!-- RT Clock greeting goes here-->
 
       </div>
 
@@ -122,10 +122,10 @@
 
         <h2 class="text-center">Stopwatch</h2>
 
-        <div id="stopwatchdisplay">00:00:00</div> <!-- Starting value to zeros-->
+        <div id="stopwatchdisplay" class="clockdisplay">00:00:00</div> <!-- Starting value to zeros-->
 
         <!--Stopwatch operating buttons-->
-        <div class="clockbuttoncontainer">
+        <div class="centeringcontainer">
           <button class="btn clockbutton" id="startbutton" onclick="start()">Start</button>
           <button class="btn clockbutton" id="pausebutton" onclick="pause()">Pause</button>
           <button class="btn clockbutton" id="stopbutton" onclick="reset()">Reset</button>
@@ -139,7 +139,7 @@
 
         <h2 class="text-center">Countdown timer</h2>
 
-        <div id="container" class="timerinputcontainer">
+        <div id="container" class="centeringcontainer">
 
           <h3>Give Minutes:</h3>
 
@@ -152,9 +152,9 @@
 
         </div>
 
-        <div id="countdown">Timer</div>
+        <div id="countdown" class="clockdisplay">Timer</div>
 
-        <div class="clockbuttoncontainer">
+        <div class="centeringcontainer">
           <button class="btn clockbutton" id="timerstart" onclick="countdownTimer()">Start</button>
 
           <button class="btn clockbutton" id="timerstop" onclick="timerstop()">Stop</button>
