@@ -10,4 +10,4 @@
 
 #### This portfolio is displayed here. By following the link you can see these projects working in your browser: https://angelicaroselie.github.io/
 
-#### My artist portfolio can be found here: https://www.angelicaroselie.com/
+#### My personal website can be found here: https://www.angelicaroselie.com/
