@@ -38,8 +38,9 @@
 /* Styling everything */
 
 body {
-    background: rgb(242, 134, 233);
-    background: linear-gradient(90deg, rgba(242, 134, 233, 1) 5%, rgba(245, 167, 241, 1) 15%, rgba(234, 198, 236, 1) 50%, rgba(227, 169, 241, 1) 85%, rgba(214, 134, 240, 1) 95%);
+    background-color: #e692e6;
+    background-image: linear-gradient(to right, #ffb9ff, #eaadff);
+    margin: auto;
     font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -49,7 +50,7 @@ main {
 }
 
 h1 {
-    color: #580558;
+    color: #8b008b;
     text-align: center;
     font-size: 180%;
     font-family: 'Petit Formal Script', cursive;
@@ -57,13 +58,14 @@ h1 {
 }
 
 h2 {
-    color: #580558;
+    color: #8b008b;
     font-size: 160%;
     margin-bottom: 20px;
     margin-top: 30px;
 }
 
 h3 {
+    color: #8b008b;
     font-size: 120%;
     margin-bottom: 20px;
     margin-top: 30px;
@@ -95,7 +97,7 @@ a:hover {
     max-width: 300px;
     float: right;
     margin: 5px 0px 10px 30px;
-  }
+}
 
 img {
     border-radius: 12px;
@@ -112,7 +114,7 @@ img {
 input, textarea {
     border-radius: 8px;
     border: 1px solid purple;
-    background-color: rgb(231, 168, 245);
+    background-color: rgb(232, 154, 250);
 }
 
 input:focus, textarea:focus {
@@ -122,8 +124,8 @@ input:focus, textarea:focus {
 /* Styling the centered bootstrap navbar */
 
 .navbar {
-    background-color: #e667e6;
-    background-image: linear-gradient(to right, #f286e9, #d686f0);
+    background-color: #ce79ce;
+    background-image: linear-gradient(to right, #ff9aff, #e094f7);
     margin-bottom: 20px;
     font-size: 120%;
     padding: 0px;
@@ -157,27 +159,27 @@ input:focus, textarea:focus {
 .heartlist ul {
     list-style: none;
     margin-bottom: 50px;
-  }
-  
-  /* Unordered heartlist - Position absolute and negative margin to stop heart bullet from interrupting the flow of the text */
-  
-  .heartlist ul li:before {
+}
+
+/* Unordered heartlist - Position absolute and negative margin to stop heart bullet from interrupting the flow of the text */
+
+.heartlist ul li:before {
     content: "\2661";
     color: magenta;
     font-size: 24px;
     position: absolute;
     margin-left: -1.0em;
-  }
-  
-  /* Unordered heartlist - Position relative, so heartlist is aligned properly */
-  
-  .heartlist li {
+}
+
+/* Unordered heartlist - Position relative, so heartlist is aligned properly */
+
+.heartlist li {
     font-size: 24px;
     color: #8b008b;
     position: relative;
     margin-left: 1.0em;
     margin-bottom: 5px;
-  }
+}
 
 /* Roleplay dice roller -------------------------------------------------------------------*/
 
@@ -295,7 +297,7 @@ input:focus, textarea:focus {
     /* Safari and Chrome */
     -webkit-appearance: none;
     appearance: none;
-    background: url("./img/br_down.webp") #e486ed no-repeat calc(100% - 10px) !important;
+    background: url("./img/br_down.webp") rgb(232, 154, 250) no-repeat calc(100% - 10px) !important;
 }
 
 /* Hides title option from select */
@@ -323,7 +325,7 @@ input:focus, textarea:focus {
 
 #clockfunctiondropdown {
     padding: 5px;
-    background-color: #e486ed;
+    background-color: rgb(232, 154, 250);
     border: 1px solid purple;
     border-radius: 8px;
     color: black;
@@ -359,10 +361,9 @@ input:focus, textarea:focus {
 /* RT Clock ------------------------------------- */
 
 #clock {
+    color: #8b008b;
     width: 100%;
     font-size: 200%;
-    color: #e486ed;
-    text-shadow: 1px 1px black;
     text-align: center;
     margin: 10px 0px 10px 0px;
 }
@@ -370,9 +371,8 @@ input:focus, textarea:focus {
 /* RT Clock greeting */
 
 #greeting {
+    color: #8b008b;
     font-size: 200%;
-    color: #e486ed;
-    text-shadow: 1px 1px black;
     text-align: center;
     margin: 10px 0px 10px 0px;
 }
@@ -515,7 +515,7 @@ input:focus, textarea:focus {
     border-radius: 20px;
 }
 
-.formtextarea{
+.formtextarea {
     max-width: 95%;
 }
 
@@ -556,11 +556,11 @@ input:focus, textarea:focus {
     font-size: 22px;
 }
 
-.surveyinputscontainer{
+.surveyinputscontainer {
     margin-bottom: 20px;
 }
 
-.surveybtn{
+.surveybtn {
     margin-top: 40px;
 }
 
@@ -608,7 +608,7 @@ input:focus, textarea:focus {
     /* Safari and Chrome */
     -webkit-appearance: none;
     appearance: none;
-    background: url("./img/br_down.webp") rgb(231, 168, 245) no-repeat calc(100% - 10px) !important;
+    background: url("./img/br_down.webp") rgb(232, 154, 250) no-repeat calc(100% - 10px) !important;
 }
 
 .tipinput {
