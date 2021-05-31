@@ -109,7 +109,6 @@
                         <input type="tel" class="tipinput" placeholder="Amount here:" v-model.number="billAmount"
                             @change="calculateTip" maxlength="7">
 
-
                         <!--Dropdown for currency (€ or $)-->
                         <select id='dropdownforcurrency' class="customarrowdropdown" v-model='currency'>
                             <option>€</option>
@@ -117,13 +116,11 @@
                         </select>
                     </div>
 
-
                     <!--Slider for tip percent-->
-
                     <div>
                         <h2>Tip Percent:</h2>
-                        <input class="slider" type="range" min="0" max="30" step="5" value="0" v-model.number="tipPercent"
-                            @change="calculateTip">
+                        <input class="slider" type="range" min="0" max="30" step="5" value="0"
+                            v-model.number="tipPercent" @change="calculateTip">
 
                         <span class="sliderscore"> {{ tipPercent }}% </span>
                     </div>
@@ -136,12 +133,11 @@
 
                     <!--Calculating and displaying total amount of the bill to pay-->
                     <div>
-                        <h2>Total sum to pay: {{currency}}{{ Number(tipToPay) + Number(billAmount) }}</h2>
+                        <h2>Total sum: {{currency}}{{ Number(tipToPay) + Number(billAmount) }}</h2>
                     </div>
 
 
                     <!--Displaying tipping guidelines-->
-
                     <div class="heartlist">
                         <h2>Service quality tip guidelines:</h2>
                         <ul>
@@ -158,7 +154,6 @@
                 <!-- Console log print test for tipToPay data variable, now commented out
                 {{ log(tipToPay) }}
                 -->
-
             </div>
 
         </div>
