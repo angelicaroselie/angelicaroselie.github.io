@@ -1,16 +1,180 @@
+/* Reset CSS ---------------------------- */
+
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Container just for centering elements ---------------------------------------- */
+/* Styling everything -------------------------------------- */
 
-.centeringcontainer {
-    text-align: center;
+body {
+    background: rgb(231, 158, 255);
+    background: linear-gradient(90deg, rgb(247, 188, 255) 0%, rgb(244, 172, 253) 100%);
+    margin: auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+main {
+    width: 85%;
     margin: 0 auto;
 }
 
-/* Overwriting bootstrap classes to style buttons */
+h1 {
+    color: #8b008b;
+    text-align: center;
+    font-size: 34px;
+    padding-bottom: 25px;
+    font-family: 'Petit Formal Script', cursive;
+}
+
+h2 {
+    color: #8b008b;
+    font-size: 25px;
+    padding: 15px 0px 15px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+h3 {
+    color: #8b008b;
+    font-size: 150%;
+    padding: 15px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+p {
+    color: #6d0c6d;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* Link elements color and hovered color */
+
+a {
+    color: #e83cff;
+}
+
+a:hover {
+    color: rgb(174, 0, 255);
+    transition-duration: 0.5s;
+}
+
+/* Footer */
+
+.footer {
+    color: #6d0c6d;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+/* For app displays setting font color in div elements */
+
+div {
+    color: #8b008b;
+}
+
+/* Highlighting links */
+
+.highlighted {
+    font-size: 25px;
+}
+
+/* Image styling */
+
+.profilepic {
+    width: 100%;
+    max-width: 300px;
+    float: right;
+    margin: 5px 0px 10px 30px;
+}
+
+img {
+    border-radius: 12px;
+}
+
+
+
+/* Styling all input & text area elements */
+
+input, textarea {
+    margin-bottom: 6px;
+    border-radius: 8px;
+    border: 1px solid purple;
+    background-color: rgb(232, 154, 250);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* Styling the centered bootstrap navbar ------------------------------- */
+
+.navbar {
+    background-color: #000000;
+    background-image: linear-gradient(to right, #20051f, #180011);
+    margin-bottom: 20px;
+    font-size: 120%;
+    padding: 0px;
+    box-shadow: 0 2px 2px -2px #000000;
+}
+
+/* Styling link text color for bootstrap navbar */
+
+.navtext {
+    color: #c70fc7;
+}
+
+.active {
+    color: rgb(255, 1, 255);
+}
+
+.navbar li a:hover {
+    color: rgb(255, 1, 255);
+    transition-duration: 0.5;
+}
+
+.dropdown-menu {
+    background-color: #e667e6;
+}
+
+.dropdown-item:hover {
+    background-color: #e667e6;
+    color: magenta;
+}
+
+/* Unordered heartlist ---------------------------------------------- */
+
+.heartlist ul {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+/* Unordered heartlist - Position absolute and negative margin to stop heart bullet from interrupting the flow of the text */
+
+.heartlist ul li:before {
+    content: "\2661";
+    color: magenta;
+    font-size: 24px;
+    position: absolute;
+    margin-left: -1.0em;
+}
+
+/* Unordered heartlist - Position relative, so heartlist is aligned properly */
+
+.heartlist li {
+    font-size: 24px;
+    color: #8b008b;
+    position: relative;
+    margin-left: 1.0em;
+    margin-bottom: 5px;
+}
+
+/* Apps ----------------------------------------------------------------------------- */
+
+/* Overwriting bootstrap classes to style buttons -------------------- */
 
 .btn {
     background-color: #e486ed;
@@ -42,7 +206,7 @@
     /* Lowering the shadow */
 }
 
-/* Custom arrow dropdown */
+/* Custom arrow dropdown for apps --------------------------------------------- */
 
 .customarrowdropdown {
     position: relative;
@@ -72,157 +236,11 @@
     display: none;
 }
 
-/* Styling everything */
+/* Container just for centering elements --------------------------------------------- */
 
-body {
-    background-color: #e692e6;
-    background-image: linear-gradient(to right, #ffb9ff, #eaadff);
-    margin: auto;
-    font-family: 'Nanum Gothic', sans-serif;
-}
-
-main {
-    width: 85%;
+.centeringcontainer {
+    text-align: center;
     margin: 0 auto;
-}
-
-h1 {
-    color: #8b008b;
-    text-align: center;
-    font-size: 180%;
-    font-family: 'Petit Formal Script', cursive;
-    margin-bottom: 30px;
-}
-
-h2 {
-    color: #8b008b;
-    font-size: 160%;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-h3 {
-    color: #8b008b;
-    font-size: 120%;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-/* For app displays setting font color in div elements */
-
-div {
-    color: #8b008b;
-}
-
-p {
-    color: #6d0c6d;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 28px;
-    font-size: 16px;
-}
-
-a {
-    color: #e83cff;
-}
-
-a:hover {
-    color: rgb(174, 0, 255);
-    transition-duration: 0.5s;
-}
-
-.certificatelink {
-    font-size: 22px;
-}
-
-.profilepic {
-    width: 100%;
-    max-width: 300px;
-    float: right;
-    margin: 5px 0px 10px 30px;
-}
-
-img {
-    border-radius: 12px;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 15px;
-}
-
-/* Styling all input & text area elements */
-
-input, textarea {
-    margin-bottom: 6px;
-    border-radius: 8px;
-    border: 1px solid purple;
-    background-color: rgb(232, 154, 250);
-}
-
-input:focus, textarea:focus {
-    outline: none;
-}
-
-/* Styling the centered bootstrap navbar */
-
-.navbar {
-    background-color: #ce79ce;
-    background-image: linear-gradient(to right, #ff9aff, #e094f7);
-    margin-bottom: 20px;
-    font-size: 120%;
-    padding: 0px;
-    box-shadow: 0 2px 2px -2px #f286e9;
-}
-
-/* Styling link text color for bootstrap navbar */
-
-.navtext {
-    color: black;
-}
-
-.navtext:hover {
-    color: purple;
-}
-
-.navtext {
-    transition-duration: 0.5s;
-}
-
-.dropdown-menu {
-    background-color: #e667e6;
-}
-
-.dropdown-item:hover {
-    background-color: #9e419e;
-}
-
-/* Unordered heartlist */
-
-.heartlist ul {
-    list-style: none;
-    margin-bottom: 50px;
-}
-
-/* Unordered heartlist - Position absolute and negative margin to stop heart bullet from interrupting the flow of the text */
-
-.heartlist ul li:before {
-    content: "\2661";
-    color: magenta;
-    font-size: 24px;
-    position: absolute;
-    margin-left: -1.0em;
-}
-
-/* Unordered heartlist - Position relative, so heartlist is aligned properly */
-
-.heartlist li {
-    font-size: 24px;
-    color: #8b008b;
-    position: relative;
-    margin-left: 1.0em;
-    margin-bottom: 5px;
 }
 
 /* Roleplay dice roller -------------------------------------------------------------------*/
